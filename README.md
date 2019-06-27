@@ -1,4 +1,4 @@
-##Utility Functions
+## Utility Functions
 
 ```typescript
 'changes the given value by the given amount in the given time with the given interval.'
