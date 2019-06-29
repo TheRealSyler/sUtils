@@ -1,12 +1,15 @@
 {
   "name": "suf",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "utility functions.",
   "files": [
-    "dist/index.d.ts",
-    "dist/index.js"
+    "lib",
+    "README.md"
   ],
-  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +18,9 @@
   "dependencies": {
     "rxjs": "^6.5.2",
     "typescript": "^3.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheRealSyler/sUtils"
   }
 }

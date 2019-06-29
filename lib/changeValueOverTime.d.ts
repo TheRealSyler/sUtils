@@ -22,25 +22,3 @@ export declare function changeValueOverTime(timeSpan: number, amount: number, in
  * @param subscipton Subscription to unsubscribe from when ``returnValues[1]`` is `true`
  */
 export declare function changeValueOverTimeHelper(subscipton: Subscription, returnValues: [number, boolean, number]): number;
-/**
- * resizes a and b based on the newA value while maintaining the aspect Ratio.
- * @param newA  resizes b while maintaining the aspect ratio.
- * @param a can be height, width, x, y or any other value.
- * @param b should be the height if a is the width.
- */
-export declare function resizeAndMaintainAspectRatio(newA: number, a: number, b: number, renameOutput?: {
-    a: string;
-    b: string;
-}): {
-    [x: string]: number;
-};
-/**
- * Gets a random string with the given length, if length is undefiend the length will be 7.
- * @param length maximun posible Number.
- */
-export declare function getRandomString(length?: number): string;
-/**
- * Gets a random integer within the given Range, if max is undefiend max will be 7.
- * @param max maximun posible Number.
- */
-export declare function getRandomInt(max?: number): number;
