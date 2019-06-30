@@ -43,4 +43,13 @@ Or
 const RandomArray = Random.Array(10, 'string', [['ascending'], ['literal', '0000'], ['randomNumber']]);
 
 
+'This function Loops over every entry of the default options obj,'
+'if the entry is different in the options object the entry in the default obj will be set to the options entry.'
+
+'Note: if there are entries in the options obj that are not in the default obj the entry will be ignored.'
+defualtOptions(options: {}, defualt: {})
+@example
+const newOptions = {a: 15, b: 400, z: 100};
+const default = {a: 100, b: 50, d: 100, c: 50};
+const options = defualtOptions(newOptions, default); //? { a: 15, b: 400, d: 100, c: 50 }
 ```
