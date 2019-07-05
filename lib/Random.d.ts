@@ -1,12 +1,12 @@
 export declare namespace Random {
     /**
-     * Gets a random string with the given length, if length is undefiend the length will be 7.
-     * @param length maximun posible Number.
+     * Gets a random string with the given length, if length is undefined the length will be 7.
+     * @param length maximum possible Number.
      */
     function String(length?: number): string;
     /**
-     * Gets a random integer within the given Range, if max is undefiend max will be 10000.
-     * @param max maximun posible Number.
+     * Gets a random integer within the given Range, if max is undefined max will be 10000.
+     * @param max maximum possible Number.
      */
     function IntNumber(max?: number): number;
     /**
@@ -24,7 +24,7 @@ export declare namespace Random {
         [x: string]: any;
     };
     /**
-     * Genreate a random array.
+     * Generate a random array.
      * @param arrayLength length of the generated array.
      * @param itemContent an array that defines the content of each item.
      * @param itemType the type of the item.
