@@ -75,7 +75,7 @@ export declare namespace Password {
      */
     function Validate(password: string, checks: ValidateCheck[], options?: ValidateOptions): ValidateReturn;
     /**
-     * The password has to contain a uppercase letter, a number, a symbol, and cannot contain any spaces.
+     * The password has to contain an uppercase letter, number and cannot contain any spaces.
      * @param password password or string to check.
      */
     function ValidateSimple(password: string): boolean;

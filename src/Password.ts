@@ -100,16 +100,11 @@ export namespace Password {
     }
   }
   /**
-   * The password has to contain a uppercase letter, a number, a symbol, and cannot contain any spaces.
+   * The password has to contain an uppercase letter, number and cannot contain any spaces.
    * @param password password or string to check.
    */
   export function ValidateSimple(password: string) {
-    return Password.Validate(password, [
-      { type: 'uppercase' },
-      { type: 'numbers' },
-      { type: 'symbols' },
-      { type: 'spaces', negative: true }
-    ]).passed;
+    return Password.Validate(password, [{ type: 'uppercase' }, { type: 'numbers' }, { type: 'spaces', negative: true }]).passed;
   }
   interface _ValidateHandledRegex {
     errType: 'normal' | 'times';
