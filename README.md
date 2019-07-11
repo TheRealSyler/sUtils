@@ -76,4 +76,8 @@ Password.ValidateSimple(password: string);
 const password = 'theBestPassword123$'
 Password.ValidateSimple(password); // should meet all the requirements and return true.
 
+'Returns the clamped value.'
+MathUtils.Clamp(value: number, min: number, max: number)
+@example
+const a = MathUtils.Clamp(200, 0, 100);//= a = 100
 ```
