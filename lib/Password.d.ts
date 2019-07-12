@@ -38,15 +38,15 @@ export declare namespace Password {
         /**
          * the maximum length of the password, if the password is longer then the other checks will not be performed.
          */
-        maxLength: number;
+        maxLength?: number;
         /**
          * the minimum length of the password, if the password is shorter then the other checks will not be performed.
          */
-        minLength: number;
+        minLength?: number;
         /**
          * if true additional data will be returned.
          */
-        passData: boolean;
+        passData?: boolean;
     }
     interface ValidateReturn {
         /**
@@ -69,9 +69,10 @@ export declare namespace Password {
      * Validates a password or other strings with checks that have to be provided in the checks array,
      * if the **`passed`** key of the returned object is true
      * then all checks have been passed successfully.
+     *
      * @param password password or other string to be checked.
      * @param checks array of checks that will be performed.
-     * @param options Extra Options.
+     * @param options min and max length and other stuff.
      */
     function Validate(password: string, checks: ValidateCheck[], options?: ValidateOptions): ValidateReturn;
     /**

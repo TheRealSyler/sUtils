@@ -10,7 +10,7 @@ export function defaultOptions(options: {}, defaultOptions: {}): any {
   if (options) {
     for (const [key] of Object.entries(defaultOptions)) {
       // @ts-ignore shut up ts
-      if (options[key]) {
+      if (options[key] !== undefined) {
         // @ts-ignore you too
         defaultOptions[key] = options[key];
       }

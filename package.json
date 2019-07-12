@@ -1,6 +1,6 @@
 {
   "name": "suf",
-  "version": "0.2.5",
+  "version": "0.2.9",
   "description": "utility functions.",
   "files": [
     "lib",
@@ -11,6 +11,7 @@
   },
   "main": "lib/index.js",
   "scripts": {
+    "prepublishOnly": "tsc -b",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Syler",
