@@ -75,11 +75,20 @@ export class EventManager {
    * @param listenerId unique listener id.
    * @param listener Event Listener.
    */
-  ADD_Listener(event: string, listenerId: string, listener: EVENTListener) {
-    if (this._EVENTS[event].listeners[listenerId] !== undefined) {
-      console.warn(listenerId, ' is already Subscribed to ', event);
+  ADD_Listener(event: string, listenerId: string, listener: EVENTListener, options = { createNewEvent: true }) {
+    if (this._EVENTS[event] !== undefined) {
+      if (this._EVENTS[event].listeners[listenerId] !== undefined) {
+        console.warn(listenerId, ' is already Subscribed to ', event);
+      } else {
+        this._EVENTS[event].listeners[listenerId] = listener;
+      }
     } else {
-      this._EVENTS[event].listeners[listenerId] = listener;
+      if (options.createNewEvent) {
+        this.ADD_Event(event);
+        this.ADD_Listener(event, listenerId, listener);
+      } else {
+        console.warn(event, ` doesn't exist.`);
+      }
     }
   }
   /**

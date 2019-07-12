@@ -40,7 +40,9 @@ export declare class EventManager {
      * @param listenerId unique listener id.
      * @param listener Event Listener.
      */
-    ADD_Listener(event: string, listenerId: string, listener: EVENTListener): void;
+    ADD_Listener(event: string, listenerId: string, listener: EVENTListener, options?: {
+        createNewEvent: boolean;
+    }): void;
     /**
      * Remove the given event from this instance of the event manager.
      * @param event Event to Remove.
