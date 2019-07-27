@@ -5,3 +5,4 @@ export * from './defaultOptions';
 export * from './Password';
 export * from './MathUtils';
 export * from './event.manager';
+export * from './copyStringToClipboard';
