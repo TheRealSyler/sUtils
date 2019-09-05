@@ -1,6 +1,6 @@
 {
   "name": "suf",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "utility functions.",
   "files": [
     "lib",
@@ -11,13 +11,12 @@
   },
   "main": "lib/index.js",
   "scripts": {
-    "prepublishOnly": "tsc -b",
+    "prepack": "tsc -b",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Syler",
   "license": "MIT",
-  "dependencies": {
-    "rxjs": "^6.5.2",
+  "devDependencies": {
     "typescript": "^3.5.2"
   },
   "repository": {

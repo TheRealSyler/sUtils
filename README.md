@@ -1,14 +1,6 @@
 ## Utility Functions
 
 ```typescript
-'changes the given value by the given amount in the given time with the given interval.'
-changeValueOverTime(timeSpan: number, amount: number, initialValue: number, intervalTime?: number): Observable<[number, boolean, number]>;
-changeValueOverTimeHelper(subscription: Subscription, returnValues: [number, boolean, number]): number;
-@example
-let valueToChange = 10;
-const sub = changeValueOverTime( 1000, 10, valueToChange).subscribe(returnValues => {
-  valueToChange = changeValueOverTimeHelper(sub, returnValues);
-});
 
 'resizes a and b based on the newA value while maintaining the aspect Ratio.'
 resizeAndMaintainAspectRatio(newA: number, a: number, b: number, renameOutput?: { a: string; b: string;}): { [x: string]: number;};
