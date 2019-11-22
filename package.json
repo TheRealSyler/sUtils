@@ -11,11 +11,12 @@
   },
   "main": "lib/index.js",
   "scripts": {
-    "prepack": "tsc -b"
+    "prepack": "rm ./lib/** -R && tsc -b && tdg --exclude 'index' --dir ./lib --name 'SUF (Browser)'"
   },
   "author": "Syler",
   "license": "MIT",
   "devDependencies": {
+    "ts-doc-gen": "^0.1.1",
     "tslib": "^1.10.0",
     "typescript": "^3.5.2"
   },
